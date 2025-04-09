@@ -8,6 +8,7 @@ require('dotenv').config();
 const authRoutes = require('./routes/auth');
 
 const app = express();
+const jlptRoutes = require('./routes/jlpt');
 
 // Middleware
 app.use(cors());
@@ -16,6 +17,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/jlpt', jlptRoutes);
 
 // Khởi động server
 const PORT = process.env.PORT || 5000;
