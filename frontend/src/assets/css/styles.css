@@ -854,3 +854,222 @@ img {
     width: 260px;
   }
 }
+
+
+/* JLPT Level Page Styles */
+.jlpt-level-page {
+  min-height: 100vh;
+}
+
+.level-banner {
+  padding: var(--space-10) 0;
+  margin-bottom: var(--space-6);
+}
+
+.level-banner h1 {
+  color: var(--color-text-dark);
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-3);
+}
+
+.level-banner p {
+  color: var(--color-text);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-6);
+}
+
+.level-progress {
+  margin-top: var(--space-4);
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+}
+
+.progress-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.level-tabs {
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tab-btn {
+  padding: var(--space-3) var(--space-4);
+  margin-right: var(--space-2);
+  border: none;
+  background: none;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  color: var(--color-text);
+  transition: var(--transition-normal);
+}
+
+.tab-btn:hover {
+  color: var(--color-primary);
+}
+
+.tab-btn.active {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.tab-content {
+  padding: var(--space-4) 0;
+  min-height: 500px;
+}
+
+/* Overview Section */
+.overview-section {
+  margin-bottom: var(--space-8);
+}
+
+.overview-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.stat-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.stat-card i {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.stat-card h3 {
+  font-size: var(--font-size-md);
+  margin-bottom: var(--space-2);
+}
+
+.roadmap-section {
+  margin-bottom: var(--space-8);
+}
+
+.roadmap {
+  margin-top: var(--space-4);
+}
+
+.roadmap-item {
+  display: flex;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.roadmap-week {
+  width: 100px;
+  margin-right: var(--space-4);
+  padding: var(--space-2);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.roadmap-content h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-2);
+}
+
+.skills-section {
+  margin-bottom: var(--space-8);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-4);
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.skills-list i {
+  color: var(--color-primary);
+  margin-right: var(--space-2);
+}
+
+.video-section {
+  margin-bottom: var(--space-8);
+}
+
+.video-container {
+  margin-top: var(--space-4);
+}
+
+.video-placeholder {
+  height: 300px;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder i {
+  font-size: var(--font-size-4xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.exam-info {
+  margin-bottom: var(--space-8);
+}
+
+.exam-details {
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .overview-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roadmap-item {
+    flex-direction: column;
+  }
+
+  .roadmap-week {
+    width: auto;
+    margin-bottom: var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-stats {
+    grid-template-columns: 1fr;
+  }
+}
